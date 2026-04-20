@@ -21,8 +21,11 @@ Domain: Healthcare Problem: Patients often struggle to articulate symptoms, lead
 Objective: An empathetic agent interface that conducts a preliminary medical interview and prepares a summary for the doctor.
 
 Agent 1: The Interviewer. Uses "Reflective Listening" techniques. It asks one question at a time to gather symptoms, duration, and severity. It stops when it has enough info.
+
 Agent 2: The Medical Coder. Analyzes the conversation and maps symptoms to standard ICD-10 codes (e.g., "Headache" -> "R51").
+
 Agent 3: The Risk Assessor. Checks against a rules engine. If symptoms indicate "Heart Attack" or "Stroke," it triggers an immediate "EMERGENCY" override flag.
+
 Agent 4: The Scribe. Generates a SOAP Note (Subjective, Objective, Assessment, Plan) formatted specifically for Electronic Health Records (EHR).
 Agentic Solution: Implement Guardrails. The Risk Assessor must run in parallel to the Interviewer. If the Risk Assessor detects "red flag" keywords (chest pain, numbness), it must interrupt the flow immediately to direct the user to Emergency Services.
 
