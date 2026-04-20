@@ -3,14 +3,22 @@ An empathetic multi-agent healthcare assistant that conducts structured patient 
 
 # Core Requirements
 Architecture: Must use a multi-agent framework (LangGraph, CrewAI, or AutoGen).
+
 Validation: All agent outputs must be structured (JSON/Pydantic models), not free text.
+
 Memory: Must implement "Short-term" (thread state) and "Long-term" (Vector DB/SQL/Document DB) memory.
+
 UI: All projects must have a login page, interactive UI and a chat interface. Use React framework for frontend.
+
 RAG & MCP Servers: Feel free to integrate RAG, Function/Tool calling and MCP as per use case.
+
 Test Coverage: Should be more than 80%
+
 Docker: Use dockerfile for running for microservice.
 
-# Domain: Healthcare Problem: Patients often struggle to articulate symptoms, leading to misdirection in hospitals. Objective: An empathetic agent interface that conducts a preliminary medical interview and prepares a summary for the doctor.
+Domain: Healthcare Problem: Patients often struggle to articulate symptoms, leading to misdirection in hospitals. 
+
+Objective: An empathetic agent interface that conducts a preliminary medical interview and prepares a summary for the doctor.
 
 Agent 1: The Interviewer. Uses "Reflective Listening" techniques. It asks one question at a time to gather symptoms, duration, and severity. It stops when it has enough info.
 Agent 2: The Medical Coder. Analyzes the conversation and maps symptoms to standard ICD-10 codes (e.g., "Headache" -> "R51").
